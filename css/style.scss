@@ -1,0 +1,200 @@
+// 横幅固定
+html, body {
+  width: 100%;
+  overflow-x: hidden;
+  background-color: #eeeeee;
+}
+
+// 全体スタイル
+* {
+  font-family: 'Noto Sans JP', sans-serif;
+  // font-family: 'Oswald', sans-serif;
+}
+
+.nav-back {
+  position: fixed;
+  top: 16px;
+  left: 0;
+  z-index: 200;
+  display: block;
+  width: 100%;
+}
+nav {
+  position: relative;
+  display: block;
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px 30px;
+  text-align: right;
+  background-color: #FFFFFF;
+  border-radius: 16px;
+
+  .logo {
+    position: absolute;
+    left: 30px;
+    top: 30px;
+    display: block;
+    height: 20px;
+  }
+  ul {
+    display: inline-block;
+    li {
+      display: inline-block;
+      margin: 0 10px;
+      font-size: 14px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+  }
+  button {
+    background-color: #000000;
+    color: #FFFFFF;
+    height: 40px;
+    line-height: 40px;
+    padding: 0 30px;
+    border-radius: 20px;
+    outline: none;
+    border: none;
+    margin: 0 10px;
+    font-size: 14px;
+    font-weight: bold;
+  }
+}
+
+header {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100vh;
+  margin: 0 auto;
+  padding: 0 0;
+  overflow: hidden;
+  h1 {
+    position: fixed;
+    top: 128px;
+    left: 40vw;
+    z-index: 109;
+    display: block;
+    width: 20vw;
+    margin: 0 auto;
+    color: #FFFFFF;
+    font-weight: bold;
+    font-size: 8vh;
+    line-height: 10vw;
+    text-align: left;
+    opacity: 1;
+    transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
+    transform-style: preserve-3d;
+    will-change: transform, opacity;
+    -ms-writing-mode: tb-rl;
+    writing-mode: vertical-rl;
+
+    .header_title-back {
+      position: relative;
+      display: inline-block;
+      width: 8vw;
+      line-height: 8vw;
+      padding: 16px 0;
+      background-color: rgba(0,0,0, .1);
+      backdrop-filter: blur(60px);
+
+      .cover {
+        position: absolute;
+        bottom: -16px;
+        z-index: 198;
+        display: block;
+        width: 100%;
+        height: calc(100% + 16px);
+        background-color: #FFFFFF;
+        animation: text-cover 1s linear forwards;
+      }
+    }
+  }
+  .close {
+    .header_title-back {
+      overflow: hidden;
+      animation: close-text 1s linear forwards;
+    }
+  }
+  .video-wrapper {
+    transform: translateX(-50vw);
+    z-index: 0;
+    display: block;
+    width: 200vw;
+    video {
+      display: block;
+      width: 100vw;
+      margin: -10vh auto 0;
+    }
+  }
+
+  .wrapper{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    overflow: hidden;
+    width: 100%;
+    margin-inline: auto;
+    .wrapper-relative {
+      position: relative;
+      width: 200vw;
+    }
+    h3 {
+      display: inline-block;
+      width: 100vw;
+      margin: 0;
+      padding: 0;
+      font-size: 6vw;
+      height: 7vw;
+      font-weight: bold;
+      vertical-align: top;
+      color: #FFFFFF;
+      overflow: hidden;
+      text-align: center;
+    }
+    .loop {
+      position: absolute;
+      top: 0;
+      left: 0;
+      animation: loop 16s linear infinite;
+    }
+    .loop2{
+      animation: loop 16s -8s linear infinite;
+    }
+  }
+}
+
+
+main {
+  height: 100vh;
+}
+
+
+// アニメーション定義
+
+@keyframes text-cover {
+  0% {
+    height: calc(100% + 16px);
+  }
+  100% {
+    height: 0;
+  }
+}
+@keyframes close-text {
+  0%{
+  }
+  100%{
+    height: 0;
+    display: none;
+  }
+}
+@keyframes loop {
+  0%{
+    transform: translateX(100%);
+  }
+  100%{
+    transform: translateX(-100%);
+  }
+}
+

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>MASUKEN</title>
+  <link rel="shortcut icon" href="./favicon.ico" />
+
+  <!-- css -->
+  <link href="css/reset.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
+
+  <!-- fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&family=Oswald&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div
+    class="nav-back">
+    <nav>
+      <img
+        src="src/logo.png"
+        alt="MASUKEN"
+        class="logo" />
+      <ul>
+        <li>マスケンについて</li>
+        <li>施工事例</li>
+        <li>購入者の方へ</li>
+        <li>会社情報</li>
+        <li>採用情報</li>
+        <li>お知らせ</li>
+      </ul>
+      <button>
+        お問い合わせ
+      </button>
+    </nav>
+  </div>
+  <header>
+    <h1>
+      <span
+        class="header_title-back">
+        <span class="cover"></span>
+        住まいを変えて
+      </span><br>
+      <span
+        class="header_title-back">
+        <span class="cover"></span>
+        人生を変える
+      </span>
+    </h1>
+    <div
+      class="video-wrapper">
+      <video
+        id="top-video"
+        src="src/top-video.mp4"
+        autoplay
+        loop
+        muted
+        playsinline>
+        <img
+          src="src/1.jpg"
+          alt="Placeholder">
+      </video>
+    </div>
+    <div
+      class="wrapper">
+      <div
+        class="wrapper-relative">
+        <h3 class="loop">LIFE DESIGN COMPANY MASUKEN</h3><h3 class="loop2">LIFE DESIGN COMPANY MASUKEN</h3>
+      </div>
+    </div>
+  </header>
+  <main>
+    <div>
+
+    </div>
+  </main>
+  <footer>
+
+  </footer>
+</body>
+<script>
+  // スクロール時のイベント
+  const handleScroll = (e) => {
+    const scrollTop = window.pageYOffset || document.documentElement.scrollTop
+    console.log(`Top: ${scrollTop} | height : ${document.documentElement.clientHeight}`)
+    if(scrollTop < 1000) {
+      document.getElementById('top-video').style.width = `${100 + scrollTop/ 20}vw`
+    }
+    if (scrollTop >= document.documentElement.clientHeight) {
+      console.log('hello')
+      document.getElementsByTagName('h1')[0].classList.add('close')
+    }
+  }
+  window.addEventListener('scroll', handleScroll)
+</script>
+</html>
