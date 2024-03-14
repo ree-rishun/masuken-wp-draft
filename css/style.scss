@@ -78,7 +78,7 @@ header {
     display: block;
     width: 20vw;
     margin: 0 auto;
-    color: #FFFFFF;
+    color: rgba(0,0,0, .1);
     font-weight: bold;
     font-size: 8vh;
     line-height: 10vw;
@@ -149,7 +149,7 @@ header {
       height: 7vw;
       font-weight: bold;
       vertical-align: top;
-      color: #FFFFFF;
+      color: rgba(255,255,255, .7);
       overflow: hidden;
       text-align: center;
     }
@@ -157,19 +157,136 @@ header {
       position: absolute;
       top: 0;
       left: 0;
-      animation: loop 16s linear infinite;
+      animation: loop 20s linear infinite;
     }
     .loop2{
-      animation: loop 16s -8s linear infinite;
+      animation: loop 20s -10s linear infinite;
     }
   }
 }
 
 
 main {
-  height: 100vh;
 }
 
+// 各セクション
+section {
+  position: relative;
+  display: block;
+  height: 100vh;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+// CHALLENGE
+.section-challenge {
+  h2 {
+    font-size: 25vh;
+    height: 25vh;
+    line-height: 25vh;
+    color: #cccccc;
+    font-family: "Noto Serif JP", serif;
+    font-weight: 600;
+    font-style: normal;
+    position: absolute;
+    z-index: 0;
+  }
+  .challenge__title-top {
+    top: 86px;
+    left: 0;
+  }
+  .challenge__title-bottom {
+    bottom: 0;
+    right: 0;
+  }
+  h3 {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    font-family: "Noto Serif JP", serif;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 6vh;
+    margin: 30vh auto 0;
+    span {
+      font-family: "Noto Serif JP", serif;
+      font-weight: 600;
+      font-size: 12vh;
+    }
+  }
+
+  .challenge__description {
+    position: relative;
+    z-index: 1;
+    display: block;
+    margin: 8vh auto 0;
+    text-align: center;
+    font-size: 24px;
+    line-height: 64px;
+    font-family: "Noto Serif JP", serif;
+  }
+}
+
+// VALUE
+.section-value {
+  width: 90%;
+  h2 {
+    margin-top: 86px;
+    font-size: 20vh;
+    height: 20vh;
+    line-height: 25vh;
+    color: #cccccc;
+    font-family: "Noto Serif JP", serif;
+    font-weight: 600;
+    font-style: normal;
+  }
+  h3 {
+    margin: 24px 0 0;
+    font-size: 32px;
+    color: #cccccc;
+    font-family: "Noto Serif JP", serif;
+    font-weight: 600;
+    font-style: normal;
+  }
+  .value__lifedesign {
+    position: relative;
+    z-index: 1;
+    display: inline-block;
+    margin: 24px 0 0;
+    padding: 0 40px;
+    height: 90px;
+    line-height: 90px;
+    background-color: #000000;
+
+    span {
+      position: relative;
+      z-index: 2;
+      font-family: "Noto Serif JP", serif;
+      font-weight: 600;
+      font-style: normal;
+      font-size: 64px;
+      color: #FFFFFF;
+    }
+
+    .value__lifedesign-circle {
+      position: absolute;
+      top: -83px;
+      right: -128px;
+      z-index: 0;
+      display: inline-block;
+      width: 256px;
+      height: 256px;
+      animation: rotate-endless 24s linear infinite;
+    }
+  }
+  .value__description {
+    margin: 24px 0 0;
+    font-family: "Noto Serif JP", serif;
+    font-style: normal;
+    font-size: 24px;
+    line-height: 48px;
+  }
+}
 
 // アニメーション定義
 
@@ -197,4 +314,12 @@ main {
     transform: translateX(-100%);
   }
 }
-
+// 回転するアニメーション
+@keyframes rotate-endless {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
