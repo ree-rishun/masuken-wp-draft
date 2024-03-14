@@ -332,9 +332,9 @@ section {
 }
 .section-nakaniwa h2 {
   margin-top: 86px;
-  font-size: 15vh;
-  height: 20vh;
-  line-height: 20vh;
+  font-size: 10vh;
+  height: 15vh;
+  line-height: 15vh;
   color: #000000;
   font-family: "Noto Serif JP", serif;
   font-weight: 600;
@@ -342,7 +342,7 @@ section {
   text-align: center;
 }
 .section-nakaniwa h3 {
-  margin: 24px 0 0;
+  margin: 0;
   font-size: 48px;
   color: rgba(0, 0, 0, 0.4);
   font-family: "Noto Serif JP", serif;
@@ -351,7 +351,7 @@ section {
   text-align: center;
 }
 .section-nakaniwa p {
-  margin: 24px auto 0;
+  margin: 16px auto 0;
   width: 800px;
   font-size: 18px;
   line-height: 32px;
@@ -359,8 +359,10 @@ section {
   font-style: normal;
 }
 .section-nakaniwa .nakaniwa__images {
-  margin: 32px auto 0;
+  margin: 0 auto;
   text-align: center;
+  display: block;
+  width: 100%;
 }
 .section-nakaniwa .nakaniwa__images span {
   display: inline-block;
