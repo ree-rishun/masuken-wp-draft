@@ -25,19 +25,29 @@
         alt="MASUKEN"
         class="logo" />
       <ul>
-        <li>マスケンについて</li>
-        <li>施工事例</li>
-        <li>購入者の方へ</li>
-        <li>会社情報</li>
-        <li>採用情報</li>
-        <li>お知らせ</li>
+        <li>
+          マスケンについて
+        </li>
+        <li>
+          中庭ストーリー
+        </li>
+        <li>
+          施工事例
+        </li>
+        <li>
+          購入者の方へ
+        </li>
+        <li>
+          お知らせ
+        </li>
       </ul>
       <button>
         お問い合わせ
       </button>
     </nav>
   </div>
-  <header>
+  <header
+    class="section">
     <div
       class="video-wrapper">
       <video
@@ -63,7 +73,7 @@
   <main>
     <!-- challenge section -->
     <section
-      class="section-challenge">
+      class="section section-challenge">
       <h2
         class="challenge__title-top">
         CHALLENGE
@@ -87,7 +97,7 @@
 
     <!-- value section -->
     <section
-      class="section-value">
+      class="section section-value">
       <h2>
         Value
       </h2>
@@ -110,11 +120,165 @@
         プランニングをお客様のニーズに合わせて”流行に囚われず”論理に基づいて行います。
       </p>
     </section>
+
+    <!--  -->
+    <section
+      class="section section-keyword">
+
+      <h2>Key Word</h2>
+      <div
+        class="keyword__box">
+        <p
+          class="keyword__blackbox-left display_anime">
+          プライバシー
+        </p>
+        <img
+          src="src/cross.png">
+        <p
+          class="keyword__blackbox-right display_anime">
+          解放感
+        </p>
+      </div>
+
+      <p
+        class="keyword__description">
+        土地の大きさや外部環境含め<br>
+        制約がある中の限られた空間の中で上質な安らぎを感じられる住宅を提供します。
+      </p>
+
+      <img
+        src="src/down.png"
+        class="keyword__next"/>
+    </section>
+
+    <!-- nakaniwa -->
+    <section
+      class="section section-nakaniwa">
+      <h2>中庭</h2>
+      <h3>
+        NAKANIWA = MASUKEN
+      </h3>
+      <p>
+        上記のキーワードを叶えた手段の一つが「中庭」とだと弊社では考えております。<br>
+        弊社は今年て30周年を迎えました。その歴史の中で直近5年以内では90%以上のお客様に中庭付き住宅に魅力を感じていただき、ご提案を行い、上質な暮らしをしていただいております。
+      </p>
+
+      <div
+        class="nakaniwa__images">
+        <span
+          style="background-image: url('src/1.jpg')"></span>
+        <span
+          style="background-image: url('src/2.jpg')"></span>
+        <span
+          style="background-image: url('src/3.jpg')"></span>
+        <span
+          style="background-image: url('src/4.jpg')"></span>
+        <span
+          style="background-image: url('src/5.jpg')"></span>
+      </div>
+    </section>
+
+    <section
+      class="section section-gallery">
+      <h2>Gallery</h2>
+      <h3>施工事例</h3>
+      <div
+        class="gallery__ul">
+        <div
+          class="gallery__li">
+          <img
+            src="src/1.jpg"/>
+          <p>
+            2024.01.01
+          </p>
+          <h4>
+            中庭のある家
+          </h4>
+        </div>
+        <div
+          class="gallery__li">
+          <img
+            src="src/2.jpg"/>
+          <p>
+            2024.01.01
+          </p>
+          <h4>
+            中庭のある家
+          </h4>
+        </div>
+        <div
+          class="gallery__li">
+          <img
+            src="src/1.jpg"/>
+          <p>
+            2024.01.01
+          </p>
+          <h4>
+            中庭のある家
+          </h4>
+        </div>
+        <div
+          class="gallery__li">
+          <img
+            src="src/1.jpg"/>
+          <p>
+            2024.01.01
+          </p>
+          <h4>
+            中庭のある家
+          </h4>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- video -->
+    <section
+      class="section section-video">
+      <div
+        class="video__whitemask">
+        <h2>ABOUT MASUKEN</h2>
+        <h3>信頼と実績のマスケン</h3>
+        <p>
+          住まいを変えることで人生を変える。そんな体験に。<br>
+          住む人の幸せな暮らしを徹底的に考えた<br>
+          住宅を提供することで寄り添う「ライフパートナー」でありたい。
+        </p>
+      </div>
+
+      <img
+        class="play-button"
+        src="src/play-button.png"/>
+    </section>
+
+    <!-- contact -->
+    <section
+      class="section section-contact">
+      <div
+        class="contact__blackmask">
+        <div
+          class="contact__button">
+          <h3>Contact us</h3>
+          <p>
+            お問い合わせ・ご相談
+          </p>
+        </div>
+        <div
+          class="contact__button">
+          <h3>Online consultation</h3>
+          <p>
+            オンライン相談申し込み
+          </p>
+        </div>
+      </div>
+    </section>
   </main>
   <footer>
 
   </footer>
 </body>
+<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/scrollify/1.0.21/jquery.scrollify.min.js"></script>
 <script>
   // スクロール時のイベント
   const handleScroll = (e) => {
@@ -129,5 +293,42 @@
     }
   }
   window.addEventListener('scroll', handleScroll)
+
+  // スクロール自動化
+  $.scrollify({
+    section : '.section',//1ページスクロールさせたいエリアクラス名
+    scrollbars:'false',//スクロールバー表示・非表示設定
+    interstitialSection : '',//ヘッダーフッターを認識し、1ページスクロールさせず表示されるように設定
+    easing: '', // 他にもlinearやeaseOutExpoといったjQueryのeasing指定可能
+    scrollSpeed: 300, // スクロール時の速度
+
+    afterRender:function() {
+      let activeClass = ''
+      $('.section').each(
+        (i) => {//1ページスクロールさせたいエリアクラス名を指定
+        activeClass = ''
+        if(i === $.scrollify.currentIndex()) {
+          activeClass = 'active'
+        }
+      })
+    }
+  })
+
+  const DISPLAY_CLASS = 'displayed'
+
+  window.onload = function(){
+    //スクロールイベント
+    let targets = document.getElementsByClassName('display_anime')
+    window.addEventListener('scroll', function () {
+      const scroll = window.scrollY
+      const windowHeight = window.innerHeight
+      for (let target of targets) {
+        const targetPos = target.getBoundingClientRect().top + scroll
+        if (scroll > targetPos - windowHeight + (window.outerHeight * .4)) {
+          target.classList.add(DISPLAY_CLASS);
+        }
+      }
+    })
+  }
 </script>
 </html>

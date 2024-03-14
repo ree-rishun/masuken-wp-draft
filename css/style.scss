@@ -59,6 +59,7 @@ nav {
     margin: 0 10px;
     font-size: 14px;
     font-weight: bold;
+    cursor: pointer;
   }
 }
 
@@ -230,6 +231,12 @@ section {
 // VALUE
 .section-value {
   width: 90%;
+  background-image: url("../src/philosophy.png");
+  background-repeat: no-repeat;
+  background-size: 400px;
+  background-position: right 5% center;
+  background-attachment: fixed;
+
   h2 {
     margin-top: 86px;
     font-size: 20vh;
@@ -288,8 +295,270 @@ section {
   }
 }
 
-// アニメーション定義
+// key word
+.section-keyword {
+  h2 {
+    text-align: center;
+    margin-top: 86px;
+    font-size: 20vh;
+    height: 25vh;
+    line-height: 25vh;
+    color: #cccccc;
+    font-family: "Noto Serif JP", serif;
+    font-weight: 600;
+    font-style: normal;
+  }
+  .keyword__box {
+    margin: 64px auto 0;
+    text-align: center;
+    img {
+      height: 64px;
+      vertical-align: top;
+    }
+    .keyword__blackbox-left, .keyword__blackbox-right {
+      vertical-align: top;
+      display: inline-block;
+      width: 300px;
+      height: 64px;
+      line-height: 64px;
+      text-align: center;
+      background-color: #000000;
+      color: #FFFFFF;
+      font-size: 32px;
+      font-family: "Noto Serif JP", serif;
+      font-weight: 600;
+      font-style: normal;
+    }
+    .keyword__blackbox-left {
+      &.displayed {
+        animation: faderight-anim 1s linear forwards;
+      }
+    }
+    .keyword__blackbox-right {
+      &.displayed {
+        animation: fadeleft-anim 1s linear forwards;
+      }
+    }
+  }
+  .keyword__description {
+    text-align: center;
+    margin: 64px 0 0;
+    font-family: "Noto Serif JP", serif;
+    font-style: normal;
+    font-size: 24px;
+    line-height: 48px;
+  }
+  .keyword__next {
+    position: absolute;
+    bottom: 10px;
+    height: 18vh;
+    left: 49vw;
+  }
+}
 
+// 中庭
+.section-nakaniwa {
+  background-color: #3FA5F1;
+  h2 {
+    margin-top: 86px;
+    font-size: 15vh;
+    height: 20vh;
+    line-height: 20vh;
+    color: #000000;
+    font-family: "Noto Serif JP", serif;
+    font-weight: 600;
+    font-style: normal;
+    text-align: center;
+  }
+  h3 {
+    margin: 24px 0 0;
+    font-size: 48px;
+    color: rgba(0, 0, 0, .4);
+    font-family: "Noto Serif JP", serif;
+    font-weight: 600;
+    font-style: normal;
+    text-align: center;
+  }
+  p {
+    margin: 24px auto 0;
+    width: 800px;
+    font-size: 18px;
+    line-height: 32px;
+    font-family: "Noto Serif JP", serif;
+    font-style: normal;
+  }
+  .nakaniwa__images {
+    margin: 32px auto 0;
+    text-align: center;
+
+    span {
+      display: inline-block;
+      width: 10vw;
+      height: 40vh;
+      margin: 0 1vw;
+      object-fit: cover;
+      border-radius: 5vw;
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: center;
+      background-attachment: fixed;
+    }
+  }
+}
+
+// 施工事例
+.section-gallery {
+
+  h2 {
+    margin-top: 86px;
+    font-size: 20vh;
+    height: 25vh;
+    line-height: 25vh;
+    color: #cccccc;
+    font-family: "Noto Serif JP", serif;
+    font-weight: 600;
+    font-style: normal;
+    text-align: center;
+  }
+  h3 {
+    margin: 24px 0 0;
+    font-size: 32px;
+    color: #cccccc;
+    font-family: "Noto Serif JP", serif;
+    font-weight: 600;
+    font-style: normal;
+    text-align: center;
+  }
+  .gallery__ul {
+    text-align: center;
+    .gallery__li {
+      width: 300px;
+      display: inline-block;
+      margin: 64px 16px 0;
+
+      img {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+        border-radius: 20px;
+      }
+      h4 {
+        text-align: center;
+      }
+      p {
+        text-align: center;
+      }
+    }
+  }
+}
+
+// video
+.section-video {
+  background-image: url("../src/video-thumbnail.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+
+  .video__whitemask {
+    display: block;
+    height: calc(100vh - 100px);
+    width: 1000px;
+    padding-top: 100px;
+    background: linear-gradient(90deg, rgba(255, 255, 255, .8), rgba(255, 255, 255, .0));
+  }
+  h2 {
+    display: block;
+    width: 90%;
+    margin: calc(40vh - 200px) 0 0 128px;
+    font-size: 64px;
+    line-height: 64px;
+    color: #000000;
+    font-family: "Noto Serif JP", serif;
+    font-weight: 600;
+    font-style: normal;
+  }
+  h3 {
+    display: block;
+    width: 90%;
+    margin: 24px 0 0 128px;
+    font-size: 32px;
+    color: #000000;
+    font-family: "Noto Serif JP", serif;
+    font-weight: 600;
+    font-style: normal;
+  }
+  p {
+    margin: 24px 0 0 128px;
+    font-size: 18px;
+    font-family: "Noto Serif JP", serif;
+    font-style: normal;
+    line-height: 48px;
+  }
+  .play-button {
+    position: absolute;
+    width: 128px;
+    height: 128px;
+    top: calc(50vh - 64px);
+    right: 30%;
+    cursor: pointer;
+
+    &:hover {
+      opacity: .7;
+    }
+  }
+}
+
+// contact
+.section-contact {
+  background-image: url("../src/contact-back.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+
+  .contact__blackmask {
+    display: block;
+    width: 100%;
+    padding-top: calc(50vh - 5vh - 96px);
+    height: 80vh;
+    background-color: rgba(0, 0, 0, .4);
+  }
+
+  // ボタン
+  .contact__button {
+    display: block;
+    width: 480px;
+    height: 96px;
+    margin: 0 auto 10vh;
+    cursor: pointer;
+
+    &:hover {
+      opacity: .6;
+    }
+
+    h3 {
+      color: #FFFFFF;
+      font-size: 48px;
+      line-height: 70px;
+      height: 70px;
+    }
+    p {
+      height: 26px;
+      line-height: 26px;
+      color: #FFFFFF;
+      font-size: 18px;
+
+      background-image: url("../src/right-arrow.png");
+      background-position: right center;
+      background-size: auto 100%;
+      background-repeat: no-repeat;
+    }
+  }
+}
+
+
+// アニメーション定義
 @keyframes text-cover {
   0% {
     height: calc(100% + 16px);
@@ -321,5 +590,31 @@ section {
   }
   100% {
     transform: rotate(360deg);
+  }
+}
+
+@keyframes faderight-anim {
+  0% {
+    transform:translateX(-100px);
+    opacity: 0;
+  }
+  70% {
+    opacity: 1;
+  }
+  100% {
+    transform:translateX(0px);
+  }
+}
+
+@keyframes fadeleft-anim {
+  0% {
+    transform:translateX(100px);
+    opacity: 0;
+  }
+  70% {
+    opacity: 1;
+  }
+  100% {
+    transform:translateX(0px);
   }
 }
